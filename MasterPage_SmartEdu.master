@@ -1,0 +1,250 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_SmartEdu.master.cs" Inherits="MasterPage_debate" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+        <link href="CSS/6/default_6.css" rel="stylesheet" type="text/css" /> 
+    <style>
+        .footer {
+            clear: both;
+            height: 100px;
+            background-color: silver;
+            padding: 10px;
+            font-size: small;
+            width: 1000px;
+
+            
+            border-top:groove;
+            border-top-color:silver;
+        }
+
+
+
+        .content {  
+            min-width: 400px;
+            min-height: 300px;
+            width: 1300px;
+            height: 2500px;
+
+        }
+         
+        
+        .nav{
+            
+            float: left;
+            padding-left: 10px;
+            width: 296px;
+            height: 1000px;
+            background-color: white;
+            border: thin none black;
+            margin-left: 200px;
+        }
+
+        
+
+        .auto-style4 {
+            color: #000000;
+        }
+        
+                                
+
+        .auto-style8 {
+            text-align: center;
+        }
+                
+                                
+
+        .auto-style11 {
+            background-color: #FDCD0F;
+        } 
+        
+             
+        
+        .auto-style2 {
+            background-color: #FEEB9E;
+        }
+        
+
+    
+
+        .auto-style12 {
+            text-align: right;
+        }
+        .auto-style13 {
+            width: 1900px;
+        }
+                
+                                
+
+        .auto-style14 {
+            height: 327px;
+        }
+                
+                                
+
+        </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="height: 3305px; width:1894px; backg
+    round-color:white; margin-right: 0px;">
+    <form id="form" runat="server">
+
+
+        <div>
+
+            <div class="auto-style12">
+
+
+                <asp:Panel ID="PanelLogOUT" runat="server"  Height="100px" CssClass="auto-style11" Width="1900px"> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <br />
+                    <br />
+
+                <asp:Button ID="bnt_login" runat="server" CausesValidation="False" CssClass="button-style22" OnClick="bnt_login_Click" Text="로그인" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="bnt_join" runat="server" CssClass="button-style22" OnClick="bnt_join_Click" Text="회원가입" CausesValidation="False" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </asp:Panel>
+
+
+            </div>
+
+
+            <div class="auto-style12">
+
+
+                <asp:Panel ID="PanelLogIN" runat="server"  Height="100px" CssClass="auto-style11" Width="1900px"> 
+                
+                
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <br />
+                    <br />
+
+
+
+                    <strong>
+                    <asp:Label ID="Label3" runat="server" CssClass="auto-style4" style="color: #333333; background-color: #FDCD0F;" Text="[Label3]"></asp:Label>
+                    </strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="bnt_mypage" runat="server" CausesValidation="False" CssClass="button-style22" OnClick="bnt_mypage_Click" Text="마이페이지" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="bnt_logout" runat="server" CausesValidation="False" CssClass="button-style22" OnClick="bnt_logout_Click" Text="로그아웃" />
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                    <br />
+
+                
+            </asp:Panel>
+                    </div>
+            <div class="auto-style8">
+                    <asp:Panel ID="Panel_logo" runat="server"  Height="100px" CssClass="auto-style2" Width="1900px"> 
+                
+                
+                    <asp:ImageButton ID="bnt_logohome4" runat="server" BorderStyle="Groove" Height="92px" ImageUrl="~/CSS_pic/홈로고.png" OnClick="bnt_logohome2_Click" Width="571px" CausesValidation="False" />
+                        <br />
+
+                
+            </asp:Panel>
+
+
+            </div>
+                    <div id="menu" class="auto-style13">
+                           <ul class="auto-style16">
+                            <li>
+                                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style12" NavigateUrl="~/Book_etc/etc_Notice.aspx">공지사항</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="auto-style12" NavigateUrl="~/Book_Debate/List.aspx">토론방</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink4" runat="server" CssClass="auto-style12" NavigateUrl="~/Book_Academy/List.aspx">스마트에듀</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink7" runat="server" CssClass="auto-style12" NavigateUrl="~/Book_FreeStore/FreeStore.aspx">아나바다</asp:HyperLink>
+                            </li>
+
+                        </ul>
+                            <br />
+                    </div>
+
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        <div class="nav" style="border-right: thin solid #CCCCCC; border-right-width: medium;">
+
+            
+            
+            <br />
+                    <strong>
+                    <asp:Image ID="Image2" runat="server" Height="250px" ImageUrl="~/CSS_pic/스마트에듀_메뉴배너.png" Width="280px" />
+                    </strong> 
+            <br />
+
+
+
+
+
+
+            <br />
+
+
+
+
+		    <asp:ImageButton ID="bnt_essay" runat="server" Height="100px" ImageUrl="~/CSS_pic/내서재_독후감_메뉴배너.png" Width="280px" OnClick="bnt_essay_Click" CausesValidation="False" />
+            <br />
+            <br />
+            <asp:ImageButton ID="bnt_academy" runat="server" Height="100px" ImageUrl="~/CSS_pic/1대1첨삭교실_메뉴배너.png" Width="280px" OnClick="bnt_academy_Click" CausesValidation="False" />
+            <br />
+            <br />
+            <asp:ImageButton ID="bnt_share" runat="server" Height="100px" ImageUrl="~/CSS_pic/자료나눔_메뉴배너.png" Width="280px" OnClick="bnt_share_Click" CausesValidation="False" />
+            <br />
+            <br />
+		
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        
+    <div class="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+        
+          <div style="background-image:url('/CSS_pic/하단.jpg')" class="auto-style14">
+     </div>
+
+         
+    </form>
+</body>
+</html>
